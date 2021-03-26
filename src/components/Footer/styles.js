@@ -2,9 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.footer`
     width: 100vw;
-    background:red;
-    
-    animation: sliding-from-bottom 2s normal;
     >.rodape {
         width: 100%;
         height: 100%;
@@ -37,16 +34,18 @@ export const Container = styled.footer`
             }
         } 
         >footer {
+            margin-top: 4rem;
             display: flex;
             justify-content: space-around;
             flex-direction: row;
-            gap: 2em;
+            column-gap: 4em;
+            row-gap: 2em;
 
             >div {
                 h3 {
                     padding-bottom: 0.25rem;
                     margin-bottom: 1rem;
-                    border-bottom: 2px solid var(--shape);
+                    border-bottom: 3px solid var(--shape);
                 }
                 p {
                     line-height: 1.25rem;
