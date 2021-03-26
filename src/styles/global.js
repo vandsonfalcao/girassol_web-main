@@ -22,10 +22,32 @@ export const GlobalStyle = createGlobalStyle`
   }
   html,
   body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: var(--background);
+    --webkit-font-smoothing: antialiased;
+  }
+  body{
     overflow-x: hidden;
   }
+  body, input, textarea, button{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+  }
+  h1, h2, h3, h4, h5, strong {
+      font-weight: 600;
+  }
+  button { 
+      cursor: pointer;
+      display: inline-block;
+  }
+  [disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
+  }
+  a {
+    color: var(--text-title)
+  }
 
+//        SCREEN SIZE
   @media screen and (max-width: 3840px) {
     html {
       font-size: 100%;
@@ -34,7 +56,6 @@ export const GlobalStyle = createGlobalStyle`
       display: none;
     }
   }
-
   @media screen and (max-width: 720px) {
     html {
       font-size: 93.75%;
@@ -52,8 +73,14 @@ export const GlobalStyle = createGlobalStyle`
         margin-bottom: 2rem;
       }
     }
+    .rodape {
+      flex-direction: column!important;
+      >footer {
+        width: 100%;
+        flex-direction: column!important;
+      }
+    }
   }
-
   @media screen and (max-width: 360px) {
     html {
       font-size: 87.5%;
@@ -73,21 +100,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  body,
-  input,
-  textarea,
-  button {
-    font: 400 1rem "Inter", sans-serif;
-  }
-
-  button {
-    cursor: pointer;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
   // ANIMATIONS
   @keyframes appearing-from-right {
       0% {
@@ -127,4 +139,4 @@ export const GlobalStyle = createGlobalStyle`
           transform: translate(0,0);
       }
   }
-`
+`;

@@ -1,5 +1,6 @@
 
 import { ContentHeader } from '../../components/ContentHeader'
+import { Footer } from '../../components/Footer'
 import { NavDesktop } from '../../components/NavDesktop'
 import { NavMobile } from '../../components/NavMobile'
 import { Container } from './styles'
@@ -17,7 +18,7 @@ export function Home2() {
                 </div>
             </header>
             <main></main>
-            <footer></footer>
+            <Footer />
         </Container>
     )
 }

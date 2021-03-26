@@ -8,7 +8,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-    header {
+    >header {
         height: 100vh;
 
         background: url(${backgroundImg}) no-repeat;
@@ -20,12 +20,8 @@ export const Container = styled.div`
             width: 80%;
         }
     }
-    main {
+    >main {
         height: 80px;
         background: var(--shape);
-    }
-    footer {
-        height: 300px;
-        background: var(--salmon);
     }
 `
