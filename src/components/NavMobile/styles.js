@@ -8,6 +8,8 @@ export const Container = styled.div`
 
     display: flex;
     flex-direction: column;
+
+    animation: sliding-from-top 2s normal;
 `;
 
 export const MenuBar = styled.div`

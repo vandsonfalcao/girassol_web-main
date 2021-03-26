@@ -13,13 +13,10 @@ export const Container = styled.div`
         font-size: 1.5rem;
     }
     form {
+        padding-top: 32px;
         h1 {
             font-size: 0.75rem; 
-            padding-top: 32px;
         }
-    }
-    &:last-child {
-        
     }
 `;
 export const ContainerButton = styled.div`

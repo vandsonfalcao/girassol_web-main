@@ -2,10 +2,15 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 100%;
-    
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     & > div {
         width: 100%;
-        margin-top: 35px;
+        height: 70%;
+
         display: flex;
         align-items: center;
         justify-content: space-between;

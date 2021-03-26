@@ -28,28 +28,47 @@ export const GlobalStyle = createGlobalStyle`
 
   @media screen and (max-width: 3840px) {
     html {
-      font-size: 93.75%;
+      font-size: 100%;
     }
     .navMobile {
-      visibility: hidden;
+      display: none;
     }
   }
 
   @media screen and (max-width: 720px) {
     html {
-      font-size: 87.5%;
+      font-size: 93.75%;
     }
     .navDesktop {
-      visibility: hidden;
+      display: none;
     }
     .navMobile {
-      visibility: visible;
+      display: flex;
     }
     .content-header {
       flex-direction: column;
-      margin-top: 0;
       h1 {
-        font-size: 2.25rem;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    html {
+      font-size: 87.5%;
+    }
+    .navDesktop {
+      display: none;
+    }
+    .navMobile {
+      display: flex;
+    }
+    .content-header {
+      flex-direction: column;
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -98,6 +117,14 @@ export const GlobalStyle = createGlobalStyle`
       100% {
           transform: translate(0,0);
           opacity: 1;
+      }
+  }
+  @keyframes sliding-from-top {
+      0% {
+          transform: translate(0,-1vh);
+      }
+      100% {
+          transform: translate(0,0);
       }
   }
 `

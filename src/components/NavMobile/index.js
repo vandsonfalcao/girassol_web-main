@@ -15,9 +15,9 @@ export function NavMobile() {
                 <MenuBar>
                     <img src={companyLogo} alt="BigCo Inc. logo" />
                     {isVisibleMenu === true ? (
-                        <a href="#" onClick={handleShowMenu}><MdClose size={45} /></a>
+                        <a href="/#" onClick={handleShowMenu}><MdClose size={45} /></a>
                     ) : (
-                        <a href="#" onClick={handleShowMenu}><MdDehaze size={45} /></a>
+                        <a href="/#" onClick={handleShowMenu}><MdDehaze size={45} /></a>
                     )}
                 </MenuBar>
             </div>
