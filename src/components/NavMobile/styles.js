@@ -10,6 +10,12 @@ export const Container = styled.div`
     flex-direction: column;
 
     animation: sliding-from-top 2s normal;
+    @media screen and (max-width: 3840px) {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
 `;
 
 export const MenuBar = styled.div`

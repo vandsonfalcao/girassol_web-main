@@ -13,9 +13,11 @@ export const Container = styled.div`
         font-size: 1.5rem;
     }
     form {
-        padding-top: 32px;
-        h1 {
-            font-size: 0.75rem; 
+        padding-top: 2rem;
+        h3 {
+            color: var(--salmon);
+            font-size: 1rem;
+            margin-bottom: 1.5rem; 
         }
     }
 `;
@@ -23,7 +25,7 @@ export const ContainerButton = styled.div`
     display: flex;
     justify-content: flex-end;
     font-size: 1rem;
-    margin-top: 36px;
+    margin-top: 2rem;
     button {
             background: var(--salmon);
             border: 0;

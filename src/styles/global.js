@@ -6,12 +6,11 @@ export const GlobalStyle = createGlobalStyle`
     --background: #f0f2f5;
     --shape: #ffffff;
 
-    --red: #e52e4d;
     --green: #33cc95;
     --salmon: #f79862;
 
     --text-title: #363f5f;
-    --text-body: #b1b1b1;
+    --text-body: #668;
   }
   * {
     margin: 0;
@@ -28,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
   body{
     overflow-x: hidden;
   }
-  body, input, textarea, button{
+  body, input, textarea, button, ul{
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
   }
@@ -47,63 +46,27 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--text-title)
   }
 
-//        SCREEN SIZE
+//        SCREEN SIZE x FONT SIZE
   @media screen and (max-width: 3840px) {
     html {
       font-size: 100%;
-    }
-    .navMobile {
-      display: none;
     }
   }
   @media screen and (max-width: 720px) {
     html {
       font-size: 93.75%;
     }
-    .navDesktop {
-      display: none;
-    }
-    .navMobile {
-      display: flex;
-    }
-    .content-header {
-      flex-direction: column;
-      h1 {
-        font-size: 4rem;
-        margin-bottom: 2rem;
-      }
-    }
-    .rodape {
-      flex-direction: column!important;
-      >footer {
-        width: 100%;
-        flex-direction: column!important;
-      }
-    }
   }
   @media screen and (max-width: 360px) {
     html {
       font-size: 87.5%;
-    }
-    .navDesktop {
-      display: none;
-    }
-    .navMobile {
-      display: flex;
-    }
-    .content-header {
-      flex-direction: column;
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
     }
   }
 
   // ANIMATIONS
   @keyframes appearing-from-right {
       0% {
-          transform: translate(1vw,0);
+          transform: translate(5vw,0);
           opacity: 0;
       }
       100% {
@@ -113,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   @keyframes appearing-from-left {
       0% {
-          transform: translate(-1vw,0);
+          transform: translate(-5vw,0);
           opacity: 0;
       }
       100% {
@@ -123,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   @keyframes appearing-from-top {
       0% {
-          transform: translate(0,-1vh);
+          transform: translate(0,-5vh);
           opacity: 0;
       }
       100% {
@@ -133,7 +96,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   @keyframes sliding-from-top {
       0% {
-          transform: translate(0,-1vh);
+          transform: translate(0,-5vh);
       }
       100% {
           transform: translate(0,0);

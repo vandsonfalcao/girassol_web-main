@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    width:80vw;
     height: 7.5rem;
     margin-top: 0.65rem;
 
@@ -10,6 +11,9 @@ export const Container = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 0;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
     section {
         font-size: 1rem;
         justify-self: flex-end;
@@ -29,6 +33,7 @@ export const Menu = styled.div`
                 background: transparent;
                 font-size: 1.25rem;
                 color: var(--text-title);
+                font-weight: 600;
 
                 opacity: 0.7;
                 transition: all 0.2s;

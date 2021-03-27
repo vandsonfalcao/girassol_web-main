@@ -16,19 +16,19 @@ export function Simular() {
                     </strong>
                     <Form ref={inputRef}>
                         <div>
-                            <h1>
+                            <h3>
                                 Seu endereço
                                 <Input
                                     name="email"
                                     placeholder="Av. Ipiranga, 1000 CEP 00000-000"
                                 />
-                            </h1>
+                            </h3>
                         </div>
                         <div>
-                            <h1>
-                                média mensal da conta de energia
+                            <h3>
+                                Média mensal da conta de energia
                                 <Input name="email" placeholder="R$ 100,00" />
-                            </h1>
+                            </h3>
                         </div>
                         <ContainerButton>
                             <button>Pesquisar</button>

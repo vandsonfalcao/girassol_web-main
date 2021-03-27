@@ -14,16 +14,30 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
+        @media screen and (max-width: 720px) {
+            flex-direction: column;
+        }
     }
 `;
 export const Mensage = styled.div`
     max-width: 600px;
 
     animation: appearing-from-right 2s normal;
+
     h1 {
         font-size: 5rem;
         color: white;
         text-shadow: 1px 1px 2px black;
+        @media screen and (max-width: 720px) {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+
+        }
+        @media screen and (max-width: 360px) {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
     }
 `;
 export const Box = styled.div`
