@@ -1,7 +1,7 @@
 import { Simular } from '../Simular'
 import { Box, Container, Mensage } from './styles'
 
-export function ContentHeader() {
+export function ContentHeaderHome() {
     return (
         <Container>
             <div>

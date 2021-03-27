@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.footer`
     width: 100vw;
     padding: 2rem 2.81rem 5rem;
+    margin-top: 3rem;
 
     background: var(--salmon);
     color: var(--shape);

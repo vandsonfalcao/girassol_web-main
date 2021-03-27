@@ -12,7 +12,7 @@ import Explorar1 from "../../assets/sights/explorar1.png";
 import Explorar2 from "../../assets/sights/explorar2.png";
 import { IoIosArrowForward } from "react-icons/io";
 
-import { ContentHeader } from '../../components/ContentHeader'
+import { ContentHeaderHome } from '../../components/ContentHeaderHome'
 import { Footer } from '../../components/Footer'
 import { NavDesktop } from '../../components/NavDesktop'
 import { NavMobile } from '../../components/NavMobile'
@@ -28,7 +28,7 @@ export function Home2() {
                         <NavDesktop />
                         <NavMobile />
                     </div>
-                    <ContentHeader />
+                    <ContentHeaderHome />
                 </div>
             </header>
             <ContentMain>
