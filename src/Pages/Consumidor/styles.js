@@ -100,11 +100,11 @@ export const Grid = styled.div`
       text-align: center;
   }
   div {
-    max-width: 390px;
+    max-width: 320px;
     text-align: center;
     div {
-        width: 390px;
-        height: 240px;
+        width: 320px;
+        height: 210px;
         display: flex;
         align-items: center;
         justify-content: center;
