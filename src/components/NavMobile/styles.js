@@ -13,7 +13,7 @@ export const Container = styled.div`
     @media screen and (max-width: 3840px) {
       display: none;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 850px) {
       display: flex;
     }
 `;

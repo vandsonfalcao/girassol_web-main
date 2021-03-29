@@ -17,6 +17,8 @@ export const Container = styled.div`
 
         display: flex;
         justify-content: center;
+
+        overflow: hidden;
         & > div {
             width: 80%;
         }

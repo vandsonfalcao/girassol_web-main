@@ -11,8 +11,8 @@ export const Container = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 0;
-    @media screen and (max-width: 768px) {
-      display: none;
+    @media screen and (max-width: 850px) {
+      visibility: hidden;
     }
     section {
         font-size: 1rem;
