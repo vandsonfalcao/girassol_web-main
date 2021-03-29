@@ -15,15 +15,21 @@ export const Container = styled.div`
         align-items: center;
         justify-content: space-between;
         
-        @media screen and (max-width: 720px) {
+        @media screen and (max-width: 768px) {
             flex-direction: column-reverse;
             gap: 3rem;
             margin-top: 20rem;
         }
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 375px) {
             flex-direction: column-reverse;
             gap: 1rem;
             margin-top: 25rem;
+        }
+        @media screen and (max-width: 320px) {
+            margin-top: 15rem;
+            img {
+                display: none;
+            }
         }
     }
 `;

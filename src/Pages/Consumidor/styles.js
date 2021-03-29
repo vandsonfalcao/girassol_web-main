@@ -1,111 +1,144 @@
-import styled from "styled-components";
-import background from "../../assets/sights/fundo_principal.png";
+import styled from 'styled-components'
+import backgroundImg from '../../assets/sights/fundo_principal.png'
+import mapaImg from "../../assets/mapa.png";
 
 export const Container = styled.div`
-  header {
+    width: 100vw;
+    background: var(--background);
+
     display: flex;
-    flex-flow: wrap;
+    flex-direction: column;
 
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 15px;
-    a {
-      margin-left: 12px;
+    >header {
+        height: 100vh;
+
+        background: url(${backgroundImg}) no-repeat;
+        background-size: 100% 100%;
+
+        display: flex;
+        justify-content: center;
+        & > div {
+            width: 80%;
+        }
     }
-  }
 `;
 
-export const FundoMenu = styled.div`
-  width: 100%;
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 539px;
-`;
+export const ContentMain = styled.main`
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 
-export const Simular = styled.div`
-  background-color: #fff;
-  padding: 20px;
-  margin-top: 0px;
-  max-width: 320vw;
-  display: flex;
-  margin-right: 30px;
-  flex-flow: column wrap;
-  strong {
-    font-size: 2rem;
-  }
+    p {
+        text-align: justify;
+        margin-bottom: 1rem;
+        color: var(--text-body);
+    }
+    h1 {
+        color: var(--salmon);
+        margin: 2rem 0;
+    }
+    h2 {
+        color: var(--text-title);
+        margin: 1rem 0;
+    }
+    h3 {
+        margin: 0.5rem 0;
+        color: var(--green);
+    }
+    >div {
+     width: 90%;
+    }
 `;
-
-export const Explorar = styled.div`
-  display: flex;
-  flex-flow: wrap;
-`;
-
-export const Dados = styled.div`
-  box-shadow: 0 0 0.3em black;
-  border-radius: 5px;
-  display: flex;
-  flex-flow: wrap;
-  align-items: center;
-  width: 560vw;
-  margin-right: 15px;
-  h1 {
-    font-size: 16px;
-    padding-left: 25px;
-  }
-  img {
-    border-radius: 5px;
-  }
-`;
-
 export const Cotacao = styled.div`
-  margin-top: 88px;
-  margin-bottom: 61px;
-  h1 {
-    margin-bottom: 8px;
-  }
   p {
     margin-bottom: 5px;
-  }
-  img {
-    margin-bottom: 5px;
-  }
-`;
-
-export const Grid = styled.div`
-  max-width: 391vw;
-  display: flex;
-  padding-bottom: 15px;
-  flex-flow: wrap;
-
-  justify-content: space-between;
-  h1 {
-    font-size: 0.75rem;
-    color: #008489;
-    margin-top: 10px;
-  }
-  p {
-    font-size: 14px;
-    margin-top: 12px;
   }
   div {
-    &:nth-child(2) {
-      margin-left: 72px;
-      margin-right: 72px;
+    width: 100%;
+    height: 50vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-image: url(${mapaImg});
+    background-size: cover;
+
+    img {
+        margin-bottom: 5px;
+    }
+    button {
+        background: #ffff;
+        border: 0;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        color: #484848;
+        svg {
+            font-size: 1rem;
+        }
+    }
+    button:hover {
+        filter: brightness(0.9);
     }
   }
+  
 `;
-
-export const Economia = styled.div`
+export const Grid = styled.div`
   display: flex;
-  margin-top: 80px;
+  flex-wrap: wrap;
   justify-content: space-between;
-  h1 {
-    color: #484848;
-    font-size: 24px;
+  row-gap: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+  @media screen and (max-width: 870px) {
+      justify-content: center;
   }
   p {
-    color: #484848;
-    font-size: 16px;
+      text-align: center;
   }
+  div {
+    max-width: 390px;
+    text-align: center;
+    div {
+        width: 390px;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        background-size: 100% 100%;
+    }
+
+  }
+`;
+export const Economia = styled.div`
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+    }
+    img {
+        float: left;
+        margin: 1rem;
+    }
+    > div {
+        width: 100%;
+        padding: 1rem;
+    } 
+    >div:first-child {
+        max-width: 40%;
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+    >section {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
 `;

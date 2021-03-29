@@ -29,7 +29,9 @@ export const Menu = styled.div`
             align-items: center;
             justify-content: space-around;
 
-            button {
+            a {
+                text-decoration: none;
+                display: block;
                 background: transparent;
                 font-size: 1.25rem;
                 color: var(--text-title);
@@ -38,7 +40,7 @@ export const Menu = styled.div`
                 opacity: 0.7;
                 transition: all 0.2s;
             }
-            button:hover {
+            a:hover {
                 opacity: 1;
             }
         }

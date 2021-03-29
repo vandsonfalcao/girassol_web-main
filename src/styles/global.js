@@ -102,4 +102,20 @@ export const GlobalStyle = createGlobalStyle`
           transform: translate(0,0);
       }
   }
+  @keyframes show-menu {
+      0% {
+          transform: translate(100vw,0);
+      }
+      100% {
+          transform: translate(0,0);
+      }
+  }
+  @keyframes hidden-menu {
+      0% {
+        transform: translate(0,0);
+      }
+      100% {
+        transform: translate(100vw,0);
+      }
+  }
 `;

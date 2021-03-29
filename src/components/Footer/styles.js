@@ -15,7 +15,7 @@ export const Container = styled.footer`
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 870px) {
         flex-direction: column;
     }
     h3 {
@@ -42,7 +42,7 @@ export const Container = styled.footer`
         column-gap: 4em;
         row-gap: 2em;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 870px) {
             width: 100%;
             flex-direction: column;
         }

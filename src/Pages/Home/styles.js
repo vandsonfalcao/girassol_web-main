@@ -1,48 +1,55 @@
-import styled from "styled-components";
-import background from "../../assets/sights/fundo_principal.png";
+import styled from 'styled-components'
+import backgroundImg from '../../assets/sights/fundo_principal.png'
+import mapaImg from "../../assets/mapa.png";
 
 export const Container = styled.div`
-  header {
+    width: 100vw;
+    background: var(--background);
+
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 15px;
-    a {
-      margin-left: 12px;
+    flex-direction: column;
+
+    >header {
+        height: 100vh;
+
+        background: url(${backgroundImg}) no-repeat;
+        background-size: 100% 100%;
+
+        display: flex;
+        justify-content: center;
+        & > div {
+            width: 80%;
+        }
     }
-  }
 `;
 
-export const FundoMenu = styled.div`
-  width: 100%;
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 539px;
-  header {
-    div {
-      flex-wrap: wrap;
+export const ContentMain = styled.main`
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    p {
+        text-align: justify;
+        margin-bottom: 1rem;
+        color: var(--text-body);
     }
-  }
+    h1 {
+        font-size: 2.5rem;
+        color: var(--salmon);
+        margin: 2rem 0;
+    }
+    >div {
+     width: 90%;
+    }
 `;
-
-export const Simular = styled.div`
-  background-color: #fff;
-  padding: 20px;
-  margin-top: 0px;
-  width: 320px;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column wrap;
-
-  strong {
-    font-size: 2rem;
-  }
-`;
-
 export const Explorar = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  >div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Dados = styled.div`
@@ -51,141 +58,159 @@ export const Dados = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 27.6vw;
-  margin-right: 15px;
-  h1 {
+  min-width: 300px;
+  margin-right: 1rem;
+  h2 {
     font-size: 1rem;
-    padding-left: 25px;
+    padding: 0 1rem;
   }
   img {
+    width: 6.25rem;
+    height: 4rem;
     border-radius: 5px;
   }
 `;
 
 export const Cotacao = styled.div`
-  margin-top: 88px;
-  margin-bottom: 61px;
-  h1 {
-    margin-bottom: 8px;
-  }
   p {
     margin-bottom: 5px;
   }
-  img {
-    margin-bottom: 5px;
+  div {
+    width: 100%;
+    height: 50vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-image: url(${mapaImg});
+    background-size: cover;
+
+    img {
+        margin-bottom: 5px;
+    }
+    button {
+        background: #ffff;
+        border: 0;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        color: #484848;
+        svg {
+            font-size: 1rem;
+        }
+    }
+    button:hover {
+        filter: brightness(0.9);
+    }
   }
+  
 `;
 
 export const Grid = styled.div`
-  @media (max-width: 800px) {
-    flex-direction: column;
-    div {
-      margin-left: 0px;
-      margin-right: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    
+    @media screen and (max-width: 768px){
+        flex-direction: column;
     }
-  }
-  max-width: 391px;
-  display: flex;
-  padding-bottom: 15px;
-  flex-direction: row;
-  justify-content: space-between;
-  h1 {
-    font-size: 0.5rem;
-    color: #008489;
-    margin-top: 10px;
-  }
-  p {
-    font-size: 0.8rem;
-    margin-top: 12px;
-  }
-  div {
-    &:nth-child(2) {
-      margin-left: 72px;
-      margin-right: 72px;
+
+    h3 {
+        color: var(--green);
+        margin-top: 10px;
     }
-  }
+    p {
+        font-size: 0.8rem;
+    }
+    >div {
+        div {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background-size: cover;
+        }
+    }
 `;
 
 export const Economia = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-  > div {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  h3 {
-    font-size: 0.6rem;
-    color: #767676;
-    margin-top: 8px;
-    margin-bottom: 4px;
-  }
-  h1 {
-    color: #484848;
-    font-size: 1rem;
-  }
-  p {
-    color: #484848;
-    font-size: 1rem;
-  }
-`;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3.5rem;
 
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+    }
+    ul {
+        color: var(--text-body);
+        list-style-type: circle;
+        line-height: 2.5rem;
+        margin-left: 1rem;
+    }
+    h3 {
+        font-size: 0.7rem;
+        color: #767676;
+        margin: 0.5rem 0;
+    }
+    > div {
+        display: grid;
+        grid-template-columns: 16vw 1fr;
+        gap: 1rem;
+        @media screen and (max-width: 768px){
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            img {
+                width: 100%;
+            }
+            
+        }
+    }
+`;
+export const CustoFuturo = styled.section`
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+
+    @media screen and (max-width: 768px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+`;
 export const Custo = styled.div`
-  h1 {
-    font-size: 1.5rem;
-  }
-  strong {
-    font-size: 1.5rem;
-    color: #484848;
-    padding-bottom: 24px;
-  }
-  > div {
-    display: flex;
-    flex-wrap: wrap;
+    > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     > div {
       margin-right: 18px;
       max-width: 290px;
       img {
-        margin-top: 30px;
-        height: 40vh;
-        width: 18vw;
-      }
-      p {
-        color: #484848;
-        font-size: 1.15rem;
-        line-height: 19px;
-        margin-bottom: 72px;
+        width: 100%;
       }
       > div {
         padding: 5px;
         border-radius: 5px;
         text-align: center;
-        border: 1px solid #484848;
+        border: 1px solid var(--salmon);
         max-width: 97px;
-        margin-bottom: 9px;
-        margin-top: 8px;
-        h1 {
+        margin: 0.5rem 0;
+        h2 {
           font-size: 0.75rem;
-          color: #484848;
+          color: var(--text-title);
         }
       }
-    }
-  }
-`;
-
-export const Futuro = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  > div {
-    max-width: 670px;
-    color: #484848;
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 24px;
-    }
-    p {
-      font-size: 1rem;
-      margin-right: 75px;
     }
   }
 `;

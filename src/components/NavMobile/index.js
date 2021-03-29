@@ -1,38 +1,55 @@
 import { useState } from 'react';
 import companyLogo from '../../assets/girassol_logo_branco.png'
-import { MdDehaze, MdClose } from 'react-icons/md'
-import { Container, MenuColumn, MenuBar } from './styles';
+import { Container, MenuColumn, MenuBar, ButtonBurger } from './styles';
 
 export function NavMobile() {
     const [isVisibleMenu, setIsVisibleMenu] = useState(false);
 
     function handleShowMenu() {
-        setIsVisibleMenu(!isVisibleMenu);
+        const btns = document.querySelectorAll('.menu-btn');
+        const itens = document.querySelectorAll('.menu-item');
+        if (!isVisibleMenu) {
+            btns.forEach((btn) => {
+                btn.classList.add('open')
+            })
+            itens.forEach((item) => {
+                item.classList.add('hidden-menu')
+            })
+            setIsVisibleMenu(!isVisibleMenu);
+
+        } else {
+            btns.forEach((btn) => {
+                btn.classList.remove('open')
+            })
+            itens.forEach((item) => {
+                item.classList.remove('hidden-menu')
+            })
+            setIsVisibleMenu(!isVisibleMenu);
+        }
     }
     return (
         <Container>
-            <div>
-                <MenuBar>
+            <MenuBar>
+                <div>
                     <img src={companyLogo} alt="BigCo Inc. logo" />
-                    {isVisibleMenu === true ? (
-                        <a href="/#" onClick={handleShowMenu}><MdClose size={45} /></a>
-                    ) : (
-                        <a href="/#" onClick={handleShowMenu}><MdDehaze size={45} /></a>
-                    )}
-                </MenuBar>
-            </div>
-            {isVisibleMenu === true ? (
-                <MenuColumn>
-                    <button>Home</button>
-                    <button>Nossa Solução</button>
-                    <button>Consumidor</button>
-                    <button>Parceiros Solar</button>
-                    <button>Contato</button>
-                    <button>Blog</button>
-                </MenuColumn>
-            ) : (
-                <div style={{ display: "none" }} />
-            )}
+                    <span>Girassol.ai</span>
+                </div>
+                <div onClick={handleShowMenu}>
+                    <ButtonBurger>
+                        <div className="menu-btn up" />
+                        <div className="menu-btn mid" />
+                        <div className="menu-btn down" />
+                    </ButtonBurger>
+                </div>
+            </MenuBar>
+            <MenuColumn>
+                <a href="/" className="menu-item">Home</a>
+                <a href="/" className="menu-item">Nossa Solução</a>
+                <a href="/consumidor" className="menu-item">Consumidor</a>
+                <a href="/" className="menu-item">Parceiros Solar</a>
+                <a href="/" className="menu-item">Contato</a>
+                <a href="/" className="menu-item">Blog</a>
+            </MenuColumn>
         </Container>
     )
 };

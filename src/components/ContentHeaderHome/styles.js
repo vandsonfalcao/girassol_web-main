@@ -14,9 +14,16 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
         @media screen and (max-width: 720px) {
             flex-direction: column;
+        }
+        @media screen and (max-width: 320px) {
+            div{
+                margin-top: 1rem;
+            }
+            h1 {
+                display: none;
+            }
         }
     }
 `;
@@ -34,7 +41,7 @@ export const Mensage = styled.div`
             margin-bottom: 1rem;
 
         }
-        @media screen and (max-width: 360px) {
+        @media screen and (max-width: 375px) {
             font-size: 3rem;
             margin-bottom: 1rem;
         }

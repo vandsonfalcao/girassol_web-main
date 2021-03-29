@@ -11,12 +11,12 @@ export function NavDesktop() {
             <Menu>
                 <img src={companyLogo} alt="BigCo Inc. logo" />
                 <div>
-                    <button>Home</button>
-                    <button>Nossa Solução</button>
-                    <button>Consumidor</button>
-                    <button>Parceiros Solar</button>
-                    <button>Contato</button>
-                    <button>Blog</button>
+                    <a href="/">Home</a>
+                    <a href="/" >Nossa Solução</a>
+                    <a href="/consumidor">Consumidor</a>
+                    <a href="/" >Parceiros Solar</a>
+                    <a href="/" >Contato</a>
+                    <a href="/" >Blog</a>
                 </div>
             </Menu>
         </Container>
